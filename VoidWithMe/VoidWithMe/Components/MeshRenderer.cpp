@@ -12,10 +12,15 @@ MeshRenderer::~MeshRenderer()
 
 }
 
-void MeshRenderer::UpdateComponent(Camera* mainCamera, Transform transform, GLuint depthTexture)
+void MeshRenderer::UpdateComponent(Camera* mainCamera, Transform transform)
 {
-	m_shader->Bind();
-	m_texture->Bind();
+	m_texture->Use(m_shader);
+	m_shader->Update(transform, *mainCamera);
+	m_mesh->Draw();
+}
+
+void MeshRenderer::DrawMesh()
+{
 	m_mesh->Draw();
 }
 

@@ -2,17 +2,23 @@
 #include "Components/Component.h"
 #include "Camera.h"
 #include "Transform.h"
+#include "Components/MeshRenderer.h"
 #include <vector>
 class Entity
 {
 public:
-	Entity(Transform transform, Camera* camera, GLuint depthTexture);
+
+	MeshRenderer* renderer;
+	Transform* transform;
+	
+
+	Entity(Transform* transform, Camera* camera);
 	~Entity();
 	void AttachComponent(Component* c);
 	void UpdateEntity();
+	void Render();
 private:
 	std::vector<Component*> Components;
-	Transform m_transform;
 	Camera* m_mainCamera;
 	GLuint m_depthTexture;
 };

@@ -7,6 +7,6 @@ class Component
 public:
 	Component();
 	~Component();
-	virtual void UpdateComponent(Camera* mainCamera, Transform transform, GLuint depthTexture);
+	virtual void UpdateComponent(Camera* mainCamera, Transform transform);
 };
 

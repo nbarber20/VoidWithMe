@@ -52,7 +52,7 @@ void main(){
 	vec3 R = reflect(-l,n);
 	float cosAlpha = clamp( dot( E,R ), 0,1 );	
 	float visibility=1.0;
-	float bias = 0.005;
+	float bias = 0.05;
 	for (int i=0;i<4;i++){
 		int index = i;
 		visibility -= 0.2*(1.0-texture( shadowMap, vec3(ShadowCoord.xy + poissonDisk[index]/700.0,  (ShadowCoord.z-bias)/ShadowCoord.w) ));

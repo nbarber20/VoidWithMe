@@ -11,7 +11,7 @@ Component::~Component()
 {
 }
 
-void Component::UpdateComponent(Camera* mainCamera, Transform transform, GLuint depthTexture)
+void Component::UpdateComponent(Camera* mainCamera, Transform transform)
 {
 
 }

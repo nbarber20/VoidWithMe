@@ -27,7 +27,11 @@ Texture::~Texture()
 	glDeleteTextures(1, &m_texture);
 }
 
-void Texture::Bind()
+void Texture::Use(Shader* shader)
 {
+	GLuint TextureID = glGetUniformLocation(shader->GetProgram(), "myTextureSampler");
+	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, m_texture);
+	// Set our "myTextureSampler" sampler to use Texture Unit 0
+	glUniform1i(TextureID, 0);
 }
