@@ -54,6 +54,12 @@
     <ClInclude Include="Components\Component.h">
       <Filter>Components</Filter>
     </ClInclude>
+    <ClInclude Include="Components\BoxCollider.h">
+      <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\SphereCollider.h">
+      <Filter>Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VoidWithMe.cpp">
@@ -84,6 +90,12 @@
       <Filter>Components</Filter>
     </ClCompile>
     <ClCompile Include="Components\Component.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\BoxCollider.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\SphereCollider.cpp">
       <Filter>Components</Filter>
     </ClCompile>
   </ItemGroup>

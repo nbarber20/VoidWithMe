@@ -15,8 +15,8 @@ Entity::~Entity()
 void Entity::AttachComponent(Component* c)
 {
 	Components.push_back(c);
-	if ((MeshRenderer*)c) {
-		renderer = (MeshRenderer*)c;
+	if (dynamic_cast<MeshRenderer*>(c)) {
+		renderer = dynamic_cast<MeshRenderer*>(c);
 	}
 }
 

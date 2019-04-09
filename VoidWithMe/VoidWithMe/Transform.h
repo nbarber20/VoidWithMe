@@ -5,6 +5,13 @@
 #include <glm/gtx/transform.hpp>
 #include "camera.h"
 
+
+
+
+
+
+
+
 struct Transform
 {
 public:
@@ -32,7 +39,7 @@ public:
 		glm::mat4 VP = camera.GetViewProjection();
 		glm::mat4 M = GetModel();
 
-		return VP * M;//camera.GetViewProjection() * GetModel();
+		return VP * M;
 	}
 
 	inline glm::vec3* GetPos() { return &pos; }

@@ -155,8 +155,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="Camera.h" />
+    <ClInclude Include="Components\BoxCollider.h" />
     <ClInclude Include="Components\Component.h" />
     <ClInclude Include="Components\MeshRenderer.h" />
+    <ClInclude Include="Components\SphereCollider.h" />
     <ClInclude Include="Display.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Mesh.h" />
@@ -168,8 +170,10 @@
     <ClInclude Include="Transform.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Components\BoxCollider.cpp" />
     <ClCompile Include="Components\Component.cpp" />
     <ClCompile Include="Components\MeshRenderer.cpp" />
+    <ClCompile Include="Components\SphereCollider.cpp" />
     <ClCompile Include="Display.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Mesh.cpp" />
