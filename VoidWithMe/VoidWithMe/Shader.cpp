@@ -2,6 +2,10 @@
 #include <iostream>
 #include <fstream>
 
+Shader::Shader()
+{
+}
+
 Shader::Shader(const std::string& VertexFilename, const std::string& FragmentFilename)
 {
 	m_program = glCreateProgram();

@@ -10,7 +10,10 @@
 class Shader
 {
 public:
+	Shader();
 	Shader(const std::string& VertexFilename, const std::string& FragmentFilename);
+	void operator=(const Shader& shader) {}
+	Shader(const Shader& shader) {}
 
 	void Bind();
 	void Update(const Transform& transform, const Camera& camera);
@@ -26,8 +29,6 @@ private:
 	static const unsigned int NUM_UNIFORMS = 3;
 
 
-	void operator=(const Shader& shader) {}
-	Shader(const Shader& shader) {}
 	
 	std::string LoadShader(const std::string& fileName);
 	void CheckShaderError(GLuint shader, GLuint flag, bool isProgram, const std::string& errorMessage);

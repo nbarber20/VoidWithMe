@@ -2,6 +2,10 @@
 #include "stb_image.h"
 #include <iostream>
 
+Texture::Texture()
+{
+}
+
 Texture::Texture(const std::string& fileName)
 {
 	int width, height, numComponents;

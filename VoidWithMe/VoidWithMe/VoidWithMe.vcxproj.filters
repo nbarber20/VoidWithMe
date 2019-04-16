@@ -16,6 +16,9 @@
     <Filter Include="Components">
       <UniqueIdentifier>{fb837aa3-67c9-4d4f-b5d8-794d3017f0af}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{75a87884-ca85-4a00-badd-592cbb10bc7e}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -60,6 +63,9 @@
     <ClInclude Include="Components\SphereCollider.h">
       <Filter>Components</Filter>
     </ClInclude>
+    <ClInclude Include="Common\text2D.hpp">
+      <Filter>Common</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VoidWithMe.cpp">
@@ -97,6 +103,9 @@
     </ClCompile>
     <ClCompile Include="Components\SphereCollider.cpp">
       <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Common\text2D.cpp">
+      <Filter>Common</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

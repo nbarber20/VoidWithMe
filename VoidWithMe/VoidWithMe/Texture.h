@@ -6,6 +6,7 @@ class Texture
 {
 public:
 public:
+	Texture();
 	Texture(const std::string& fileName);
 	void Use(Shader* shader);
 	virtual ~Texture();
