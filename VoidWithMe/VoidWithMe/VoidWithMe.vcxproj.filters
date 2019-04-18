@@ -66,6 +66,9 @@
     <ClInclude Include="Common\text2D.hpp">
       <Filter>Common</Filter>
     </ClInclude>
+    <ClInclude Include="Components\AudioComponent.h">
+      <Filter>Components</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="VoidWithMe.cpp">
@@ -106,6 +109,9 @@
     </ClCompile>
     <ClCompile Include="Common\text2D.cpp">
       <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\AudioComponent.cpp">
+      <Filter>Components</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
