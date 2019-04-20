@@ -163,10 +163,12 @@
     <ClInclude Include="Components\SphereCollider.h" />
     <ClInclude Include="Display.h" />
     <ClInclude Include="Entity.h" />
+    <ClInclude Include="FrameBuffer.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="obj_loader.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Shader.h" />
+    <ClInclude Include="Skybox.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="Texture.h" />
     <ClInclude Include="Transform.h" />
@@ -180,9 +182,11 @@
     <ClCompile Include="Components\SphereCollider.cpp" />
     <ClCompile Include="Display.cpp" />
     <ClCompile Include="Entity.cpp" />
+    <ClCompile Include="FrameBuffer.cpp" />
     <ClCompile Include="Mesh.cpp" />
     <ClCompile Include="obj_loader.cpp" />
     <ClCompile Include="Shader.cpp" />
+    <ClCompile Include="Skybox.cpp" />
     <ClCompile Include="stb_image.c" />
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="VoidWithMe.cpp" />

@@ -49,6 +49,7 @@ void Shader::Bind()
 void Shader::Update(const Transform& transform, const Camera& camera)
 {
 
+	glDisable(GL_BLEND);
 	glm::vec3 lightInvDir = glm::vec3(0.5f, 2, 2);
 
 	GLuint depthMatrixID = glGetUniformLocation(m_program, "depthMVP");

@@ -26,6 +26,33 @@ Texture::Texture(const std::string& fileName)
 	stbi_image_free(data);
 }
 
+void Texture::MakeCubeMap(std::vector<std::string> filenames)
+{
+	glGenTextures(1, &m_texture);
+	glBindTexture(GL_TEXTURE_CUBE_MAP, m_texture);
+
+	int width, height, nrChannels;
+	for (unsigned int i = 0; i < filenames.size(); i++)
+	{
+		unsigned char *data = stbi_load(filenames[i].c_str(), &width, &height, &nrChannels, 0);
+		if (data)
+		{
+			glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+			stbi_image_free(data);
+		}
+		else
+		{
+			std::cout << "Cubemap texture failed to load at path: " << filenames[i] << std::endl;
+			stbi_image_free(data);
+		}
+	}
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
+}
+
 Texture::~Texture()
 {
 	glDeleteTextures(1, &m_texture);
