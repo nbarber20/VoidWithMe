@@ -1,74 +1,104 @@
-#pragma once
+#ifndef MESH_H
+#define MESH_H
+
+
 #include <glm/glm.hpp>
-#include <gl/glew.h>
-#include "obj_loader.h"
-struct Vertex
-{
+#include <glm/gtc/matrix_transform.hpp>
+
+
+#include <string>
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <vector>
+using namespace std;
+
+struct Vertex {
+    // position
+    glm::vec3 Position;
+    // normal
+    glm::vec3 Normal;
+    // texCoords
+    glm::vec2 TexCoords;
+    // tangent
+    glm::vec3 Tangent;
+    // bitangent
+    glm::vec3 Bitangent;
+};
+
+class Mesh {
 public:
-	Vertex(const glm::vec3& pos, const glm::vec2& texCoord, const glm::vec3& normal)
-	{
-		this->pos = pos;
-		this->texCoord = texCoord;
-		this->normal = normal;
-	}
-	glm::vec3* GetPos() { return &pos; }
-	glm::vec2* GetTexCoord() { return &texCoord; }
-	glm::vec3* GetNormal() { return &normal; }
+    /*  Mesh Data  */
+    vector<Vertex> vertices;
+    vector<unsigned int> indices;
+    unsigned int VAO;
+
+    /*  Functions  */
+    // constructor
+    Mesh(vector<Vertex> vertices, vector<unsigned int> indices)
+    {
+        this->vertices = vertices;
+        this->indices = indices;
+
+        // now that we have all the required data, set the vertex buffers and its attribute pointers.
+        setupMesh();
+    }
+
+    // render the mesh
+    void Draw() 
+    {
+        
+        // draw mesh
+        glBindVertexArray(VAO);
+        glDrawElements(GL_TRIANGLES, indices.size(), GL_UNSIGNED_INT, 0);
+        glBindVertexArray(0);
+
+        // always good practice to set everything back to defaults once configured.
+        glActiveTexture(GL_TEXTURE0);
+    }
 
 private:
-	glm::vec3 pos;
-	glm::vec2 texCoord;
-	glm::vec3 normal;
+    /*  Render data  */
+    unsigned int VBO, EBO;
+
+    /*  Functions    */
+    // initializes all the buffer objects/arrays
+    void setupMesh()
+    {
+        // create buffers/arrays
+        glGenVertexArrays(1, &VAO);
+        glGenBuffers(1, &VBO);
+        glGenBuffers(1, &EBO);
+
+        glBindVertexArray(VAO);
+        // load data into vertex buffers
+        glBindBuffer(GL_ARRAY_BUFFER, VBO);
+        // A great thing about structs is that their memory layout is sequential for all its items.
+        // The effect is that we can simply pass a pointer to the struct and it translates perfectly to a glm::vec3/2 array which
+        // again translates to 3/2 floats which translates to a byte array.
+        glBufferData(GL_ARRAY_BUFFER, vertices.size() * sizeof(Vertex), &vertices[0], GL_STATIC_DRAW);  
+
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, indices.size() * sizeof(unsigned int), &indices[0], GL_STATIC_DRAW);
+
+        // set the vertex attribute pointers
+        // vertex Positions
+        glEnableVertexAttribArray(0);	
+        glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)0);
+        // vertex normals
+        glEnableVertexAttribArray(1);	
+        glVertexAttribPointer(1, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Normal));
+        // vertex texture coords
+        glEnableVertexAttribArray(2);	
+        glVertexAttribPointer(2, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, TexCoords));
+        // vertex tangent
+        glEnableVertexAttribArray(3);
+        glVertexAttribPointer(3, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Tangent));
+        // vertex bitangent
+        glEnableVertexAttribArray(4);
+        glVertexAttribPointer(4, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex), (void*)offsetof(Vertex, Bitangent));
+
+        glBindVertexArray(0);
+    }
 };
-
-enum MeshBufferPositions
-{
-	POSITION_VB,
-	TEXCOORD_VB,
-	NORMAL_VB,
-	INDEX_VB
-};
-
-class Mesh
-{
-public:
-	Mesh(const std::string& fileName);
-	Mesh(Vertex* vertices, unsigned int numVertices, unsigned int* indices, unsigned int numIndices);
-
-	inline GLuint GetVOA() const {
-		return m_vertexArrayObject;
-	}
-	void Draw();
-
-	virtual ~Mesh();
-protected:
-private:
-	static const unsigned int NUM_BUFFERS = 4;
-	void operator=(const Mesh& mesh) {}
-	Mesh(const Mesh& mesh) {}
-
-	void InitMesh(const IndexedModel& model);
-
-	GLuint m_vertexArrayObject;
-	GLuint m_vertexArrayBuffers[NUM_BUFFERS];
-	unsigned int m_numIndices;
-
-
-
-
-
-
-
-
-
-
-
-
-
-	GLuint m_vertexbuffer;
-	GLuint m_uvbuffer;
-	GLuint m_normalbuffer;
-	GLuint m_elementbuffer;
-
-};
-
+#endif

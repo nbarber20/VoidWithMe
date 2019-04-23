@@ -41,10 +41,7 @@ Shader::~Shader()
 	glDeleteProgram(m_program);
 }
 
-void Shader::Bind()
-{
-	glUseProgram(m_program);
-}
+
 
 void Shader::Update(const Transform& transform, const Camera& camera)
 {

@@ -5,7 +5,6 @@
 FrameBuffer::FrameBuffer()
 {
 
-	Shader shaowMappingShader("./resource/ShadowMapping.vs", "./resource/ShadowMapping.fs");
 	glGenFramebuffers(1, &Buffer);
 	glBindFramebuffer(GL_FRAMEBUFFER, Buffer);
 	glGenTextures(1, &depthTexture);

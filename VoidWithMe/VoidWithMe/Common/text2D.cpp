@@ -19,7 +19,7 @@
 TextRenderer::TextRenderer(GLuint width, GLuint height)
 {
 	// Load and configure shader
-	TextShader = new Shader("./resource/TextShader.vs", "./resource/TextShader.fs");
+	TextShader = new Shader("./resource/Shaders/TextShader.vs", "./resource/Shaders/TextShader.fs");
 	// Configure VAO/VBO for texture quads
 	glGenVertexArrays(1, &this->VAO);
 	glGenBuffers(1, &this->VBO);

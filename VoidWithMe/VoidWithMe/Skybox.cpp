@@ -75,7 +75,7 @@ Skybox::Skybox(std::vector<std::string> CubeMap)
 	m_skyboxCubemap = new Texture();
 	m_skyboxCubemap->MakeCubeMap(CubeMap);
 
-	m_skyboxShader = new Shader("./resource/skybox.vs", "./resource/skybox.fs");
+	m_skyboxShader = new Shader("./resource/Shaders/skybox.vs", "./resource/Shaders/skybox.fs");
 
 
 
@@ -84,12 +84,11 @@ Skybox::Skybox(std::vector<std::string> CubeMap)
 
 
 
-	m_skyboxShader->Bind();
+	m_skyboxShader->use();
 
 	glm::mat4 projection = glm::perspective(70.0f, (float)800 / (float)600, 0.1f, 100.0f);
-
-	glUniform1i(glGetUniformLocation(m_skyboxShader->GetProgram(), "skybox"), 0);
-	glUniformMatrix4fv(glGetUniformLocation(m_skyboxShader->GetProgram(), "projection"), 1, GL_FALSE, &projection[0][0]);
+	m_skyboxShader->setInt("skybox", 0);
+	m_skyboxShader->setMat4("projection", projection);
 
 
 
@@ -112,12 +111,10 @@ void Skybox::Draw(Camera camera)
 {
 	//DrawSkybox
 	glDepthFunc(GL_LEQUAL);  // change depth function so depth test passes when values are equal to depth buffer's content
-	m_skyboxShader->Bind();
+	m_skyboxShader->use();
 	//glm::mat4 projection = glm::mat4(glm::mat3(camera.GetViewMatrix()));
 	//glm::mat4 projection = glm::perspective(glm::radians(camera.Zoom), (float)SCR_WIDTH / (float)SCR_HEIGHT, 0.1f, 100.0f);
-
-	
-	glUniformMatrix4fv(glGetUniformLocation(m_skyboxShader->GetProgram(), "view"), 1, GL_FALSE, &glm::mat4(glm::mat3(camera.GetViewMatrix()))[0][0]);
+	m_skyboxShader->setMat4("view", glm::mat4(glm::mat3(camera.GetViewMatrix())));	
 	
 	// skybox cube
 	glBindVertexArray(m_skyboxVOA);
