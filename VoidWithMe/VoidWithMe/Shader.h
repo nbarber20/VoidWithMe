@@ -11,7 +11,7 @@ class Shader
 {
 public:
 	Shader();
-	Shader(const std::string& VertexFilename, const std::string& FragmentFilename);
+	Shader(const std::string& VertexFilename, const std::string& FragmentFilename, const std::string& GeometryFilename = "");
 	void operator=(const Shader& shader) {}
 	Shader(const Shader& shader) {}
 
@@ -87,8 +87,6 @@ private:
 
 
 	static const unsigned int NUM_SHADERS = 2;
-	static const unsigned int NUM_UNIFORMS = 3;
-
 
 	
 	std::string LoadShader(const std::string& fileName);
@@ -97,8 +95,10 @@ private:
 
 	GLuint m_program;
 	GLuint m_shaders[NUM_SHADERS];
-	GLuint m_uniforms[NUM_UNIFORMS];
 
+	GLuint FragmentShader;
+	GLuint VertexShader;
+	GLuint GeometryShader;
 
 
 	std::string DebugName;

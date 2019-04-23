@@ -9,7 +9,7 @@ public:
 	void Bind();
 	void Render();
 	void BindTexture();
-private:
+
 	GLuint Buffer;
 
 	GLuint depthTexture;
