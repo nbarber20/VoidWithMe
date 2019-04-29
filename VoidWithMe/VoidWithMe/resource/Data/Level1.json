@@ -1,0 +1,221 @@
+{
+  "Objects": {
+    "Tree": {
+      "Position": {
+        "X": 0.0,
+        "Y": -5.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "Animation": {
+          "File": "./resource/Animation/Animation1.json"
+        },
+        "MeshRenderer": {
+          "Model": "./resource/Models/Tree.obj",
+          "Texture": "./resource/Materials/TreeTex.jpg"
+        }
+      }
+    },
+    "OBJ2": {
+      "Position": {
+        "X": 0.0,
+        "Y": -5.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Ground.obj",
+          "Texture": "./resource/Materials/GroundTex.jpg"
+        }
+      }
+    },
+    "OBJ3": {
+      "Position": {
+        "X": -10.0,
+        "Y": -5.0,
+        "Z": -50.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Column.obj",
+          "Texture": "./resource/Materials/ColumnTex.jpg"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": false
+        }
+      }
+    },
+    "OBJ4": {
+      "Position": {
+        "X": 10.0,
+        "Y": -5.0,
+        "Z": -50.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Column_Broken.obj",
+          "Texture": "./resource/Materials/ColumnTex.jpg"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": false
+        }
+      }
+    },
+    "GUY": {
+      "Position": {
+        "X": -10.0,
+        "Y": -5.0,
+        "Z": -60.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy.obj",
+          "Texture": "./resource/Materials/ColumnTex.jpg"
+        },
+        "Audio": {
+          "File": "./resource/Sound/Music1.wav",
+          "3D": true,
+          "Loop": false,
+          "Paused": true
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+    "OBJ6": {
+      "Position": {
+        "X": 10.0,
+        "Y": -5.0,
+        "Z": -60.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Column.obj",
+          "Texture": "./resource/Materials/ColumnTex.jpg"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": false
+        }
+      }
+    }
+  },
+	"Lights":{
+		"Light1":{
+			"Position":{
+				"X":-10.0,				"Y":5.0,				"Z":0.0
+			},
+			"Shadow": true
+		},
+		"Light2":{
+			"Position":{
+				"X":10.0,				"Y":5.0,				"Z":0.0
+			},			
+			"Shadow": true
+		}
+	}
+}

@@ -18,17 +18,20 @@ void Entity::AttachComponent(Component* c)
 	if (dynamic_cast<MeshRenderer*>(c)) {
 		renderer = dynamic_cast<MeshRenderer*>(c);
 	}
+	//c->InitializeComponent(this, m_mainCamera, transform, 0);
 }
 
-void Entity::UpdateEntity()
+void Entity::UpdateEntity(float dt)
 {
 	for (auto const& c : Components) 
 	{
-		c->UpdateComponent(m_mainCamera,*transform);
+		c->UpdateComponent(m_mainCamera,transform,dt);
 	}
 }
 
 void Entity::Render()
 {
-	renderer->UpdateComponent(m_mainCamera, *transform);
+	if (renderer != NULL) {
+		renderer->DrawMesh();
+	}
 }

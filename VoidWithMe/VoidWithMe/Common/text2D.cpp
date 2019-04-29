@@ -18,6 +18,8 @@
 
 TextRenderer::TextRenderer(GLuint width, GLuint height)
 {
+	Width = width;
+	Height = height;
 	// Load and configure shader
 	TextShader = new Shader("./resource/Shaders/TextShader.vs", "./resource/Shaders/TextShader.fs");
 	// Configure VAO/VBO for texture quads
@@ -109,7 +111,7 @@ void TextRenderer::RenderText(std::string text, GLfloat x, GLfloat y, GLfloat sc
 
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  
-	glm::mat4 projection = glm::ortho(0.0f, 800.0f, 600.0f,0.0f );
+	glm::mat4 projection = glm::ortho(0.0f, (float)Width, (float)Height,0.0f );
 	glUniformMatrix4fv(glGetUniformLocation(TextShader->GetProgram(), "projection"), 1, GL_FALSE, glm::value_ptr(projection));
 	glUniform1i(glGetUniformLocation(TextShader->GetProgram(), "text"), 0);
 

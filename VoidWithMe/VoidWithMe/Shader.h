@@ -4,9 +4,6 @@
 #include <GL/glew.h>
 #include "Transform.h"
 #include "Camera.h"
-
-//remove
-#include <string>
 class Shader
 {
 public:

@@ -3,6 +3,9 @@
 
 Display::Display(int width, int height, const std::string& title)
 {
+
+	Width = width;
+	Height = height;
 	// Initialise GLFW
 	if (!glfwInit())
 	{
@@ -24,12 +27,7 @@ Display::Display(int width, int height, const std::string& title)
 		glfwTerminate();
 	}
 	glfwMakeContextCurrent(m_window);
-
-	// We would expect width and height to be 1024 and 768
-	int windowWidth = 1024;
-	int windowHeight = 768;
-	// But on MacOS X with a retina screen it'll be 1024*2 and 768*2, so we get the actual framebuffer size:
-	glfwGetFramebufferSize(m_window, &windowWidth, &windowHeight);
+	glfwGetFramebufferSize(m_window, &Width,&Height);
 
 	// Initialize GLEW
 	glewExperimental = true; // Needed for core profile
@@ -48,7 +46,7 @@ Display::Display(int width, int height, const std::string& title)
 
 	// Set the mouse at the center of the screen
 	glfwPollEvents();
-	glfwSetCursorPos(m_window, 1024 / 2, 768 / 2);
+	glfwSetCursorPos(m_window, width / 2, height / 2);
 	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
 
 	glEnable(GL_DEPTH_TEST);
@@ -60,11 +58,7 @@ Display::~Display()
 	glfwTerminate();
 }
 
-void Display::Clear(float r, float g, float b, float a)
-{
-	glClearColor(r, g, b, a);
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-}
+
 
 void Display::SwapBuffers()
 {

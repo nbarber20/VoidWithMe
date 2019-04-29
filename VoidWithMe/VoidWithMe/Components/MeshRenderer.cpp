@@ -12,10 +12,10 @@ MeshRenderer::~MeshRenderer()
 
 }
 
-void MeshRenderer::UpdateComponent(Camera* mainCamera, Transform transform)
+void MeshRenderer::UpdateComponent(Camera* mainCamera, Transform* transform, float DeltaTime)
 {
 	m_texture->Use(m_shader);
-	m_shader->Update(transform, *mainCamera);
+	m_shader->Update(*transform, *mainCamera);
 	m_model->Draw();
 }
 

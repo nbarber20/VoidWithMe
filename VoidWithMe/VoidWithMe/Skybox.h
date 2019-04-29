@@ -1,10 +1,11 @@
 #pragma once
 #include "Shader.h"
 #include "Texture.h"
+#include "Display.h"
 class Skybox
 {
 public:
-	Skybox(std::vector<std::string> CubeMap);
+	Skybox(std::vector<std::string> CubeMap, Display* display);
 	void Draw(Camera camera);
 	~Skybox();
 

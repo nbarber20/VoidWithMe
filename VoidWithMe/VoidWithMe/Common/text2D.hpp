@@ -46,6 +46,7 @@ public:
 private:
 	// Render state
 	GLuint VAO, VBO;
+	int Width, Height;
 };
 
 #endif 

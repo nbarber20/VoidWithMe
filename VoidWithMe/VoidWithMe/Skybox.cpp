@@ -2,7 +2,7 @@
 #include <GL/glew.h>
 #include "glm/gtx/transform.hpp"
 
-Skybox::Skybox(std::vector<std::string> CubeMap)
+Skybox::Skybox(std::vector<std::string> CubeMap, Display* display)
 {
 	
 
@@ -72,8 +72,7 @@ Skybox::Skybox(std::vector<std::string> CubeMap)
 	glEnableVertexAttribArray(0);
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), (void*)0);
 
-	m_skyboxCubemap = new Texture();
-	m_skyboxCubemap->MakeCubeMap(CubeMap);
+	m_skyboxCubemap = new Texture(CubeMap);
 
 	m_skyboxShader = new Shader("./resource/Shaders/skybox.vs", "./resource/Shaders/skybox.fs");
 
@@ -86,7 +85,7 @@ Skybox::Skybox(std::vector<std::string> CubeMap)
 
 	m_skyboxShader->use();
 
-	glm::mat4 projection = glm::perspective(70.0f, (float)800 / (float)600, 0.1f, 100.0f);
+	glm::mat4 projection = glm::perspective(70.0f, (float)display->Width / (float)display->Height, 0.1f, 100.0f);
 	m_skyboxShader->setInt("skybox", 0);
 	m_skyboxShader->setMat4("projection", projection);
 

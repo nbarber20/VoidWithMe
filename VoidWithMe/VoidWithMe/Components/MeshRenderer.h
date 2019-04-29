@@ -8,7 +8,7 @@ class MeshRenderer : public Component
 public:
 	MeshRenderer(Shader* shader, Texture* texture, Model* mesh);
 	~MeshRenderer();
-	void UpdateComponent(Camera* mainCamera, Transform transform) override;
+	void UpdateComponent(Camera* mainCamera, Transform* transform, float DeltaTime) override;
 	void DrawMesh();
 private:
 	Shader* m_shader;

@@ -7,6 +7,6 @@ class Component
 public:
 	Component();
 	~Component();
-	virtual void UpdateComponent(Camera* mainCamera, Transform transform);
+	virtual void UpdateComponent(Camera* mainCamera, Transform* transform, float DeltaTime);
 };
 

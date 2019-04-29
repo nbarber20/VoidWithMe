@@ -26,7 +26,7 @@ Texture::Texture(const std::string& fileName)
 	stbi_image_free(data);
 }
 
-void Texture::MakeCubeMap(std::vector<std::string> filenames)
+Texture::Texture(std::vector<std::string> filenames)
 {
 	glGenTextures(1, &m_texture);
 	glBindTexture(GL_TEXTURE_CUBE_MAP, m_texture);
@@ -52,6 +52,7 @@ void Texture::MakeCubeMap(std::vector<std::string> filenames)
 	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
 }
+
 
 Texture::~Texture()
 {

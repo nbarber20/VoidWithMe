@@ -8,8 +8,8 @@ class Texture
 public:
 public:
 	Texture();
-	Texture(const std::string& fileName);
-	void MakeCubeMap(std::vector<std::string> filenames);
+	Texture(const std::string& fileName); 
+	Texture(std::vector<std::string> filenames);
 	void Use(Shader* shader);
 	virtual ~Texture();
 	inline GLuint GetTexture() const {

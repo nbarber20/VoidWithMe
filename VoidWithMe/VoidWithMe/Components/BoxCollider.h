@@ -1,6 +1,6 @@
 #pragma once
 #include "Component.h"
-
+#include "../Entity.h"
 
 
 
@@ -26,11 +26,14 @@ private:
 class BoxCollider : public Component
 {
 public:
-	BoxCollider(glm::vec3 Offset, glm::vec3 Scale);
+	BoxCollider(Entity* e, glm::vec3 Offset, glm::vec3 Scale, bool Trigger);
 	~BoxCollider();
-	void UpdateComponent(Camera* mainCamera, Transform transform) override;
+	void UpdateComponent( Camera* mainCamera, Transform* transform, float DeltaTime) override;
 	bool PointOverlap(glm::vec3 Origin);
 	void Draw();
+
+	bool isTrigger;
+	bool isOverlapping = false;
 
 	AABB boundingBox;
 	glm::vec3 Scale;

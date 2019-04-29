@@ -156,14 +156,17 @@
   <ItemGroup>
     <ClInclude Include="Camera.h" />
     <ClInclude Include="Common\text2D.hpp" />
+    <ClInclude Include="Components\AnimationComponent.h" />
     <ClInclude Include="Components\AudioComponent.h" />
     <ClInclude Include="Components\BoxCollider.h" />
     <ClInclude Include="Components\Component.h" />
     <ClInclude Include="Components\MeshRenderer.h" />
-    <ClInclude Include="Components\SphereCollider.h" />
+    <ClInclude Include="Components\PlaySoundOnInteract.h" />
     <ClInclude Include="Display.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="FrameBuffer.h" />
+    <ClInclude Include="Input.h" />
+    <ClInclude Include="LevelLoader.h" />
     <ClInclude Include="Mesh.h" />
     <ClInclude Include="Model.h" />
     <ClInclude Include="pch.h" />
@@ -176,14 +179,17 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Common\text2D.cpp" />
+    <ClCompile Include="Components\AnimationComponent.cpp" />
     <ClCompile Include="Components\AudioComponent.cpp" />
     <ClCompile Include="Components\BoxCollider.cpp" />
     <ClCompile Include="Components\Component.cpp" />
     <ClCompile Include="Components\MeshRenderer.cpp" />
-    <ClCompile Include="Components\SphereCollider.cpp" />
+    <ClCompile Include="Components\PlaySoundOnInteract.cpp" />
     <ClCompile Include="Display.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="FrameBuffer.cpp" />
+    <ClCompile Include="Input.cpp" />
+    <ClCompile Include="LevelLoader.cpp" />
     <ClCompile Include="PointLight.cpp" />
     <ClCompile Include="Shader.cpp" />
     <ClCompile Include="Skybox.cpp" />

@@ -1,17 +1,13 @@
 #include "Component.h"
-#include "GL/glew.h"
-
 
 Component::Component()
 {
 }
 
-
 Component::~Component()
 {
 }
 
-void Component::UpdateComponent(Camera* mainCamera, Transform transform)
+void Component::UpdateComponent(Camera * mainCamera, Transform * transform, float DeltaTime)
 {
-
 }
