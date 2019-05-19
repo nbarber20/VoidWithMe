@@ -53,31 +53,13 @@ Shader::~Shader()
 void Shader::Update(const Transform& transform, const Camera& camera)
 {
 
-	glDisable(GL_BLEND);
+	/*
 	glm::vec3 lightInvDir = glm::vec3(0.5f, 2, 2);
-
-	//GLuint depthMatrixID = glGetUniformLocation(m_program, "depthMVP");
-
 	glm::mat4 depthProjectionMatrix = glm::ortho<float>(-10, 10, -10, 10, 1.0, 7.5);
 	glm::mat4 depthViewMatrix = glm::lookAt(lightInvDir, glm::vec3(0, 0, 0), glm::vec3(0, 1, 0));
 	glm::mat4 depthModelMatrix = transform.GetModel();
 	glm::mat4 depthMVP = depthProjectionMatrix * depthViewMatrix * depthModelMatrix;
-	//GLuint TextureID = glGetUniformLocation(m_program, "myTextureSampler");
-
-	// Get a handle for our "MVP" uniform
-	//GLuint MatrixID = glGetUniformLocation(m_program, "MVP");
-	//GLuint ViewMatrixID = glGetUniformLocation(m_program, "V");
-	//GLuint ModelMatrixID = glGetUniformLocation(m_program, "M");
-	//GLuint DepthBiasID = glGetUniformLocation(m_program, "DepthBiasMVP");
-	//GLuint ShadowMapID = glGetUniformLocation(m_program, "shadowMap");
-
-	// Get a handle for our "LightPosition" uniform
-	//GLuint lightInvDirID = glGetUniformLocation(m_program, "LightInvDirection_worldspace");
 	glm::mat4 ProjectionMatrix = camera.GetViewProjection();
-	//glm::mat4 ViewMatrix = camera.GetViewMatrix();
-	//glm::mat4 ModelMatrix = glm::mat4(1.0);
-	//glm::mat4 MVP = transform.GetMVP(camera);
-
 	glm::mat4 biasMatrix(
 		0.5, 0.0, 0.0, 0.0,
 		0.0, 0.5, 0.0, 0.0,
@@ -94,7 +76,7 @@ void Shader::Update(const Transform& transform, const Camera& camera)
 	setMat4("DepthBiasMVP", depthBiasMVP);
 	setMat4("depthMVP",depthMVP);
 	setVec3("LightInvDirection_worldspace", lightInvDir.x, lightInvDir.y, lightInvDir.z);
-
+	*/
 	setMat4("model", transform.GetModel());
 }
 

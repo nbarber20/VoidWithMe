@@ -2,24 +2,27 @@
 
 
 
-Input::Input()
+Input::Input(TextRenderer* text, AudioComponent* FootSfx)
 {
-
+	Text = text;
+	FootStepSFX = FootSfx;
 }
 
 void Input::Update(float dt, Display* display, Camera* camera, std::vector<BoxCollider*> Colliders)
 {
 
+	ScreenWidth = display->Width;
+	ScreenHeight = display->Height;
 	double Mousedx = 0;
 	double Mousedy = 0;
 	glfwGetCursorPos(display->GetWindow(), &Mousedx, &Mousedy);
 
 	// Reset mouse position for next frame
-	glfwSetCursorPos(display->GetWindow(), display->Width/2, display->Height/2);
+	glfwSetCursorPos(display->GetWindow(), ScreenWidth /2, ScreenHeight/2);
 
 
-	horizontalAngle += CameraSpeed * float(display->Width / 2 - Mousedx);
-	verticalAngle += CameraSpeed * float(display->Height / 2 - Mousedy);
+	horizontalAngle += CameraSpeed * float(ScreenWidth / 2 - Mousedx);
+	verticalAngle += CameraSpeed * float(ScreenHeight / 2 - Mousedy);
 
 
 
@@ -47,17 +50,26 @@ void Input::Update(float dt, Display* display, Camera* camera, std::vector<BoxCo
 	double Movedy = 0;
 	if (glfwGetKey(display->GetWindow(), GLFW_KEY_W) == GLFW_PRESS) {
 		Movedx = 1;
+		FootStepSFX->Play();
 	}
 	if (glfwGetKey(display->GetWindow(), GLFW_KEY_S) == GLFW_PRESS) {
 		Movedx = -1;
+		FootStepSFX->Play();
 	}
 	if (glfwGetKey(display->GetWindow(), GLFW_KEY_A) == GLFW_PRESS) {
 		Movedy = -1;
+		FootStepSFX->Play();
 	}
 	if (glfwGetKey(display->GetWindow(), GLFW_KEY_D) == GLFW_PRESS) {
 		Movedy = 1;
+		FootStepSFX->Play();
 	}
-
+	if (glfwGetKey(display->GetWindow(),GLFW_KEY_E) == GLFW_PRESS) {
+		Interacting = true;
+	}
+	if (glfwGetKey(display->GetWindow(), GLFW_KEY_E) == GLFW_RELEASE) {
+		Interacting = false;
+	}
 
 
 	glm::vec3 MoveForward = camera->forward;
@@ -72,7 +84,7 @@ void Input::Update(float dt, Display* display, Camera* camera, std::vector<BoxCo
 	bool overlapx = false;
 	for (auto &box : Colliders)
 	{
-		if (box->PointOverlap(CheckPos))
+		if (box->Overlap(CheckPos,1))
 		{
 			if (box->isTrigger == false) {
 				overlapx = true;
@@ -96,7 +108,7 @@ void Input::Update(float dt, Display* display, Camera* camera, std::vector<BoxCo
 	bool overlapy = false;
 	for (auto &box : Colliders)
 	{
-		if (box->PointOverlap(CheckPos))
+		if (box->Overlap(CheckPos,1))
 		{
 			if (box->isTrigger == false) {
 			
@@ -112,3 +124,12 @@ void Input::Update(float dt, Display* display, Camera* camera, std::vector<BoxCo
 
 }
 
+void Input::ShowText() {
+	Text->RenderText("E: Interact", ScreenWidth*.3f, ScreenHeight*.9, 1.0f);
+}
+
+void Input::ShowText(string text)
+{
+
+	Text->RenderText(text, ScreenWidth*.3f, ScreenHeight*.9, 1.0f);
+}

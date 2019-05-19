@@ -1,0 +1,315 @@
+{
+  "Objects": {
+    "Ground": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Void_Ground.obj",
+          "Texture": "./resource/Materials/GroundTex.jpg"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 29.660
+          },
+          "Size": {
+            "X": 104.082,
+            "Y": 100.0,
+            "Z": 9.408
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": -29.660
+          },
+          "Size": {
+            "X": 104.082,
+            "Y": 100.0,
+            "Z": 9.408
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 37.197,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 24.373,
+            "Y": 100.0,
+            "Z": 111.962
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": -37.197,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 24.373,
+            "Y": 100.0,
+            "Z": 111.962
+          },
+          "Trigger": false
+        }
+      }
+    },
+    "Star": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/VoidStar.obj",
+          "Texture": "./resource/Materials/LightGray.png"
+        }
+      }
+    },
+    "Plants": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Plant_Dimension.obj",
+          "Texture": "./resource/Materials/PlantTex.jpg"
+        }
+      }
+    },
+    "Music": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "Audio": {
+          "File": [ "./resource/Sound/Music4.wav", "./resource/Sound/Static.wav" ],
+          "3D": false,
+          "Loop": true,
+          "Paused": false,
+          "PlayAll": true,
+          "Volume": 0.05
+        }
+      }
+    },
+    "PlantMan": {
+      "Position": {
+        "X": 7.173,
+        "Y": 0.0,
+        "Z": 17.296
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": -0.691028211,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        },
+        "Audio": {
+          "File": "./resource/Sound/Dialog/LongPlants.wav",
+          "3D": true,
+          "Loop": false,
+          "Paused": true,
+          "PlayAll": false,
+          "Volume": 1.0
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+    "PlantMan2": {
+      "Position": {
+        "X": 9.182,
+        "Y": 0.0,
+        "Z": -21.803
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": -0.691028211,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        },
+        "Audio": {
+          "File": "./resource/Sound/Dialog/WelcomeToPlants.wav",
+          "3D": true,
+          "Loop": false,
+          "Paused": true,
+          "PlayAll": false,
+          "Volume": 1.0
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+    "Exit": {
+      "Position": {
+        "X": -16.979,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Door.obj",
+          "Texture": "./resource/Materials/DoorTex.png"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "LoadLevelOnInteract": {
+          "File": "./resource/Data/Hub.json",
+          "ToolTip": "E: Exit"
+        }
+      }
+    }
+
+
+
+
+
+
+
+  },
+  "Lights": {
+    "Light1": {
+      "Position": {
+        "X": 0.0,
+        "Y": 50.0,
+        "Z": 0.0
+      },
+      "Shadow": true
+    },
+    "Light2": {
+      "Position": {
+        "X": 0.0,
+        "Y": 5.0,
+        "Z": 0.0
+      },
+      "Shadow": true
+    }
+  },
+  "FootStepSFX": "./resource/Sound/FootStep2.wav",
+  "Skybox": "./resource/skybox/Ascension/"
+}

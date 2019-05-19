@@ -19,6 +19,12 @@
     <Filter Include="Common">
       <UniqueIdentifier>{75a87884-ca85-4a00-badd-592cbb10bc7e}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Components\Scripts">
+      <UniqueIdentifier>{31e26be2-7da5-4558-b662-f4067851500c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Components\Render">
+      <UniqueIdentifier>{f3da2813-7819-49be-b8f6-72b15b3b6e17}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
@@ -47,9 +53,6 @@
     </ClInclude>
     <ClInclude Include="Entity.h">
       <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Components\MeshRenderer.h">
-      <Filter>Components</Filter>
     </ClInclude>
     <ClInclude Include="Components\Component.h">
       <Filter>Components</Filter>
@@ -84,8 +87,26 @@
     <ClInclude Include="FrameBuffer.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Components\PlaySoundOnInteract.h">
+    <ClInclude Include="Components\LevelLoaderComponent.h">
       <Filter>Components</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\MeshRenderer.h">
+      <Filter>Components\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\PlaySoundOnInteract.h">
+      <Filter>Components\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\PlayAnimationOnInteract.h">
+      <Filter>Components\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\LoadLevelOnInteract.h">
+      <Filter>Components\Scripts</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\Renderer.h">
+      <Filter>Components\Render</Filter>
+    </ClInclude>
+    <ClInclude Include="Components\SpriteRenderer.h">
+      <Filter>Components\Render</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -106,9 +127,6 @@
     </ClCompile>
     <ClCompile Include="Entity.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Components\MeshRenderer.cpp">
-      <Filter>Components</Filter>
     </ClCompile>
     <ClCompile Include="Components\BoxCollider.cpp">
       <Filter>Components</Filter>
@@ -137,11 +155,29 @@
     <ClCompile Include="FrameBuffer.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="Components\PlaySoundOnInteract.cpp">
-      <Filter>Components</Filter>
-    </ClCompile>
     <ClCompile Include="Components\Component.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\LevelLoaderComponent.cpp">
+      <Filter>Components</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\MeshRenderer.cpp">
+      <Filter>Components\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\PlayAnimationOnInteract.cpp">
+      <Filter>Components\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\PlaySoundOnInteract.cpp">
+      <Filter>Components\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\LoadLevelOnInteract.cpp">
+      <Filter>Components\Scripts</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\Renderer.cpp">
+      <Filter>Components\Render</Filter>
+    </ClCompile>
+    <ClCompile Include="Components\SpriteRenderer.cpp">
+      <Filter>Components\Render</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

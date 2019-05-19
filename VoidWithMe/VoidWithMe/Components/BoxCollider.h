@@ -30,6 +30,7 @@ public:
 	~BoxCollider();
 	void UpdateComponent( Camera* mainCamera, Transform* transform, float DeltaTime) override;
 	bool PointOverlap(glm::vec3 Origin);
+	bool Overlap(glm::vec3 Origin, float OriginScale);
 	void Draw();
 
 	bool isTrigger;
@@ -37,5 +38,6 @@ public:
 
 	AABB boundingBox;
 	glm::vec3 Scale;
+	glm::vec3 Offset;
 };
 

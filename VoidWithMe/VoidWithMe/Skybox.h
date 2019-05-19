@@ -5,7 +5,8 @@
 class Skybox
 {
 public:
-	Skybox(std::vector<std::string> CubeMap, Display* display);
+	Skybox(std::string Filename, Display* display);
+	void Set(std::string Filename);
 	void Draw(Camera camera);
 	~Skybox();
 

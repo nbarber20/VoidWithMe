@@ -9,7 +9,7 @@ Texture::Texture()
 Texture::Texture(const std::string& fileName)
 {
 	int width, height, numComponents;
-	unsigned char* data = stbi_load((fileName).c_str(), &width, &height, &numComponents, 4);
+	unsigned char* data = stbi_load((fileName).c_str(), &width, &height, &numComponents,4);
 
 	if (data == NULL)
 		std::cerr << "Unable to load texture: " << fileName << std::endl;
@@ -22,6 +22,8 @@ Texture::Texture(const std::string& fileName)
 
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+
+
 	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, width, height, 0, GL_RGBA, GL_UNSIGNED_BYTE, data);
 	stbi_image_free(data);
 }
@@ -46,24 +48,20 @@ Texture::Texture(std::vector<std::string> filenames)
 			stbi_image_free(data);
 		}
 	}
-	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
 	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 	glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE);
 }
-
 
 Texture::~Texture()
 {
 	glDeleteTextures(1, &m_texture);
 }
 
-void Texture::Use(Shader* shader)
+void Texture::Use()
 {
-	GLuint TextureID = glGetUniformLocation(shader->GetProgram(), "myTextureSampler");
 	glActiveTexture(GL_TEXTURE0);
 	glBindTexture(GL_TEXTURE_2D, m_texture);
-	// Set our "myTextureSampler" sampler to use Texture Unit 0
-	glUniform1i(TextureID, 0);
 }

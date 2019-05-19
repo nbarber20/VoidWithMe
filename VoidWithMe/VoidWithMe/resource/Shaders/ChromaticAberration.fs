@@ -18,6 +18,7 @@ void main()
 {             
     vec2 uv = TexCoords;
     
+
     float uvY = uv.y;
     uvY *= 100.0;
     uvY = float(int(uvY)) * (1.0 / 250);
@@ -27,6 +28,20 @@ void main()
     float colr = texture(ScreenTexture, uv +rOffset).r;
     float colg = texture(ScreenTexture, uv +gOffset).g;
     float colb = texture(ScreenTexture, uv +bOffset).b;
-    FragColor = vec4(colr,colg,colb,1.0);
+
+    float whiteNoise = 9999.0;
+    vec4 Color;
+    vec2 samplePosition = TexCoords.xy;
+    whiteNoise = rand(vec2(floor(samplePosition.y*200.0),floor(samplePosition.x*200.0))+vec2(time,0));
+    if (whiteNoise > 1.5-5.0*samplePosition.y) {
+        Color = vec4(colr,colg,colb,1.0);
+    } else {
+         Color = vec4(colr,colg,colb,1.0)+ 0.06;
+    }
+
+
+
+
+    FragColor = Color;
 
 }

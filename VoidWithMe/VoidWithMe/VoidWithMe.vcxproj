@@ -160,8 +160,13 @@
     <ClInclude Include="Components\AudioComponent.h" />
     <ClInclude Include="Components\BoxCollider.h" />
     <ClInclude Include="Components\Component.h" />
+    <ClInclude Include="Components\LevelLoaderComponent.h" />
+    <ClInclude Include="Components\LoadLevelOnInteract.h" />
     <ClInclude Include="Components\MeshRenderer.h" />
+    <ClInclude Include="Components\PlayAnimationOnInteract.h" />
     <ClInclude Include="Components\PlaySoundOnInteract.h" />
+    <ClInclude Include="Components\Renderer.h" />
+    <ClInclude Include="Components\SpriteRenderer.h" />
     <ClInclude Include="Display.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="FrameBuffer.h" />
@@ -183,8 +188,13 @@
     <ClCompile Include="Components\AudioComponent.cpp" />
     <ClCompile Include="Components\BoxCollider.cpp" />
     <ClCompile Include="Components\Component.cpp" />
+    <ClCompile Include="Components\LevelLoaderComponent.cpp" />
+    <ClCompile Include="Components\LoadLevelOnInteract.cpp" />
     <ClCompile Include="Components\MeshRenderer.cpp" />
+    <ClCompile Include="Components\PlayAnimationOnInteract.cpp" />
     <ClCompile Include="Components\PlaySoundOnInteract.cpp" />
+    <ClCompile Include="Components\Renderer.cpp" />
+    <ClCompile Include="Components\SpriteRenderer.cpp" />
     <ClCompile Include="Display.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="FrameBuffer.cpp" />

@@ -9,7 +9,7 @@ using namespace rapidjson;
 
 
 
-AnimationComponent::AnimationComponent(std::string filename) {
+AnimationComponent::AnimationComponent(std::string filename,bool paused) {
 	FILE* fp = fopen(filename.c_str(), "rb"); // non-Windows use "r"
 	char readBuffer[65536];
 	FileReadStream is(fp, readBuffer, sizeof(readBuffer));
@@ -40,36 +40,38 @@ AnimationComponent::AnimationComponent(std::string filename) {
 	}
 	AnimationTime = 0;
 
-
+	m_paused = paused;
 
 }
 void AnimationComponent::UpdateComponent(Camera * mainCamera, Transform* transform, float DeltaTime)
 {
-	AnimationTime += DeltaTime;
-	//std::cout << AnimationTime << std::endl;
-	if (AnimationTime >= keyFrames[currentKeyframe].Time) {
-		if (keyFrames.size()-1 > currentKeyframe) {
-			currentKeyframe++;
-			LastPos = *transform;
+	if (!m_paused) {
+		AnimationTime += DeltaTime;
+		if (AnimationTime >= keyFrames[currentKeyframe].Time) {
+			if (keyFrames.size() - 1 > currentKeyframe) {
+				currentKeyframe++;
+				LastPos = *transform;
+			}
+		}
+
+		float time = (AnimationTime - keyFrames[currentKeyframe - 1].Time) / (keyFrames[currentKeyframe].Time - keyFrames[currentKeyframe - 1].Time);
+		if (time < 1) {
+			glm::vec3 newPos = lerp(time, *LastPos.GetPos(), *keyFrames[currentKeyframe].transform.GetPos());
+			transform->SetPos(newPos);
+
+			glm::vec3 newRot = lerp(time, *LastPos.GetRot(), *keyFrames[currentKeyframe].transform.GetRot());
+			transform->SetRot(newRot);
+
+			glm::vec3 newScale = lerp(time, *LastPos.GetScale(), *keyFrames[currentKeyframe].transform.GetScale());
+			transform->SetScale(newScale);
+
 		}
 	}
-
-	float time = (AnimationTime- keyFrames[currentKeyframe-1].Time) / keyFrames[currentKeyframe].Time;
-	//std::cout << time << std::endl;
-	if(time<1){
-		glm::vec3 newPos = lerp(time, *LastPos.GetPos(), *keyFrames[currentKeyframe].transform.GetPos());
-		transform->SetPos(newPos);
-
-		glm::vec3 newRot = lerp(time, *LastPos.GetRot(), *keyFrames[currentKeyframe].transform.GetRot());
-		transform->SetRot(newRot);
-
-		glm::vec3 newScale = lerp(time, *LastPos.GetScale(), *keyFrames[currentKeyframe].transform.GetScale());
-		transform->SetScale(newScale);
-
-	}
-
 } 
 
 glm::vec3 AnimationComponent::lerp(float t, const glm::vec3 a, const glm::vec3 b) {
 	return (1 - t)*a + t * b;
+}
+void AnimationComponent::Play() {
+	m_paused = false;
 }
