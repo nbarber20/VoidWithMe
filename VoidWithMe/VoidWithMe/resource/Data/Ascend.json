@@ -1,0 +1,267 @@
+{
+  "Objects": {
+    "Ground": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Void_Ground.obj",
+          "Texture": "./resource/Materials/RedTex.png"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 29.660
+          },
+          "Size": {
+            "X": 104.082,
+            "Y": 100.0,
+            "Z": 9.408
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": -29.660
+          },
+          "Size": {
+            "X": 104.082,
+            "Y": 100.0,
+            "Z": 9.408
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 37.197,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 24.373,
+            "Y": 100.0,
+            "Z": 111.962
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": -37.197,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 24.373,
+            "Y": 100.0,
+            "Z": 111.962
+          },
+          "Trigger": false
+        }
+      }
+    },
+    "Star": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/VoidStar.obj",
+          "Texture": "./resource/Materials/LightGray.png"
+        }
+      }
+    },
+    "Guy1": {
+      "Position": {
+        "X": -5.044,
+        "Y": 2.094,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy_Ascending.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        },
+        "Audio": {
+          "File": "./resource/Sound/Dialog/Ascension.wav",
+          "3D": true,
+          "Loop": false,
+          "Paused": true,
+          "PlayAll": false,
+          "Volume": 1.0
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+    "Guys": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guys_Ascending.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        }
+      }
+    },
+    "Music": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "Audio": {
+          "File": [ "./resource/Sound/Music2.mp3", "./resource/Sound/Static.wav" ],
+          "3D": false,
+          "Loop": true,
+          "Paused": false,
+          "PlayAll": true,
+          "Volume": 0.05
+        }
+      }
+    },
+    "Exit": {
+      "Position": {
+        "X": -16.979,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Door.obj",
+          "Texture": "./resource/Materials/DoorTex.png"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "LoadLevelOnInteract": {
+          "File": "./resource/Data/Hub.json",
+          "ToolTip": "E: Exit"
+        }
+      }
+    }
+
+
+
+
+
+
+
+  },
+  "Lights": {
+    "Light1": {
+      "Position": {
+        "X": 0.0,
+        "Y": 50.0,
+        "Z": 0.0
+      },
+      "Shadow": true
+    },
+    "Light2": {
+      "Position": {
+        "X": 0.0,
+        "Y": 5.0,
+        "Z": 0.0
+      },
+      "Shadow": true
+    }
+  },
+  "FootStepSFX": "./resource/Sound/FootStep2.wav",
+  "Skybox": "./resource/skybox/Ascension/"
+}

@@ -17,10 +17,13 @@ struct KeyFrame {
 class AnimationComponent : public Component
 {
 public:
-	AnimationComponent(std::string filename);
+	AnimationComponent(std::string filename, bool paused);
 	void UpdateComponent(Camera* mainCamera, Transform* transform, float DeltaTime) override;
+	void Play();
+
 	float AnimationTime;
 private:
+	bool m_paused;
 	int currentKeyframe;
 	std::vector<KeyFrame> keyFrames;
 	glm::vec3 lerp(float t, const glm::vec3 a, const glm::vec3 b);

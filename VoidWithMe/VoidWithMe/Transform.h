@@ -3,9 +3,12 @@
 
 #include <glm/glm.hpp>
 #include <glm/gtx/transform.hpp>
+#include <glm/gtx/matrix_decompose.hpp>
+#include <glm/gtx/euler_angles.hpp>
 #include "camera.h"
 
-
+//remove
+#include <iostream>
 
 
 
@@ -33,7 +36,18 @@ public:
 
 		return posMat * rotMat * scaleMat;
 	}
-
+	inline void SetModel(glm::mat4 model)
+	{
+		glm::vec3 newscale;
+		glm::quat newrotation;
+		glm::vec3 translation;
+		glm::vec3 skew;
+		glm::vec4 perspective;
+		glm::decompose(model, newscale, newrotation, translation, skew, perspective);
+		glm::quat q = glm::conjugate(newrotation);
+		glm::vec3 euler = -1.0f * glm::eulerAngles(q);
+		rot = euler;
+	}
 	inline glm::mat4 GetMVP(const Camera& camera) const
 	{
 		glm::mat4 VP = camera.GetViewProjection();
@@ -47,9 +61,8 @@ public:
 	inline glm::vec3* GetScale() { return &scale; }
 
 	inline void SetPos(glm::vec3& pos) { this->pos = pos; }
-	inline void SetRot(glm::vec3& rot) { this->rot = rot; }
+	inline void SetRot(glm::vec3 rot) { this->rot = rot; }
 	inline void SetScale(glm::vec3& scale) { this->scale = scale; }
-protected:
 private:
 	glm::vec3 pos;
 	glm::vec3 rot;

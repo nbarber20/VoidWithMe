@@ -39,7 +39,7 @@ float ShadowCalculation(vec3 fragPos , vec3 pointLightPos, int index)
     float currentDepth = length(fragToLight);
     float shadow = 0.0;
     float bias = 0.20;
-    int samples = 1;
+    int samples = 5;
     float viewDistance = length(viewPos - fragPos);
     float diskRadius = (1.0 + (viewDistance / far_plane)) / 25.0;
     for(int i = 0; i < samples; ++i)
@@ -74,20 +74,21 @@ void main()
     vec3 ambient = 0.3 * texture(diffuseTexture, fs_in.TexCoords).rgb;
     // diffuse
 
-    vec3 diffuse;
 
-	
+    vec3 diffuse;	
     for(int i = 0; i < Num_Lights; i++)
     	diffuse += CalcPointLight(lightPos[i]);
 
-
-    // calculate shadow
     float shadow;
-
     for(int i = 0; i < Num_Lights; i++)  
-    	shadow += ShadowCalculation(fs_in.FragPos,lightPos[i],i);   
-                  
-    vec3 lighting = (ambient + (1.0 - shadow) * (diffuse)) * color;    
+    	shadow += ShadowCalculation(fs_in.FragPos,lightPos[i],i)*.1;   
+
+
+
+
+
+                 
+    vec3 lighting = (ambient + (diffuse.x - shadow) * diffuse) * color;   
     
     FragColor = vec4(lighting, 1.0);
 }

@@ -8,7 +8,7 @@ class Entity
 {
 public:
 
-	MeshRenderer* renderer;
+	Renderer* renderer;
 	Transform* transform;
 	
 

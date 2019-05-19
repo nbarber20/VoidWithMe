@@ -1,0 +1,739 @@
+{
+  "Objects": {
+    "Walls": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/AltarWalls.obj",
+          "Texture": "./resource/Materials/ColumnTex.jpg"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": -13.822,
+            "Y": 0.0,
+            "Z": -28.070
+          },
+          "Size": {
+            "X": 83.752,
+            "Y": 100.0,
+            "Z": 9.297
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": -13.822,
+            "Y": 0.0,
+            "Z": 28.070
+          },
+          "Size": {
+            "X": 83.752,
+            "Y": 100.0,
+            "Z": 9.297
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 44.136,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 33.487,
+            "Y": 100.0,
+            "Z": 54.656
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": -71.666,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 33.487,
+            "Y": 100.0,
+            "Z": 54.656
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": -20.350,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 16.667,
+            "Y": 100.0,
+            "Z": 23.609
+          },
+          "Trigger": false
+        }
+      }
+    },
+    "Slab": {
+      "Position": {
+        "X": -20.433,
+        "Y": 2.431,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Altar_Slab.obj",
+          "Texture": "./resource/Materials/ColumnTex.jpg"
+        }
+      }
+    },
+    "Priest": {
+      "Position": {
+        "X": -26.174,
+        "Y": 2.030,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy_Horns.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        }
+      }
+    },
+
+    "Follower1": {
+      "Position": {
+        "X": -6.218,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 3.14,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy_Prayer.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        },
+        "Audio": {
+          "File": "./resource/Sound/Dialog/Follower_Blind.wav",
+          "3D": true,
+          "Loop": false,
+          "Paused": true,
+          "PlayAll": false,
+          "Volume": 1.0
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 5.0,
+            "Y": 100.0,
+            "Z": 5.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+    "Follower2": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 3.14,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy_Prayer.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        },
+        "Audio": {
+          "File": "./resource/Sound/Dialog/Follower_Feel.wav",
+          "3D": true,
+          "Loop": false,
+          "Paused": true,
+          "PlayAll": false,
+          "Volume": 1.0
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 5.0,
+            "Y": 100.0,
+            "Z": 5.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+    "Follower3": {
+      "Position": {
+        "X": 6.209,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 3.14,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy_Prayer.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        },
+        "Audio": {
+          "File": "./resource/Sound/Dialog/Follower_Godhead.wav",
+          "3D": true,
+          "Loop": false,
+          "Paused": true,
+          "PlayAll": false,
+          "Volume": 1.0
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 5.0,
+            "Y": 100.0,
+            "Z": 5.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+
+    "LFollower1": {
+      "Position": {
+        "X": -6.218,
+        "Y": 0.0,
+        "Z": 7.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 3.14,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy_Prayer.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        },
+        "Audio": {
+          "File": "./resource/Sound/Dialog/Follower_NotReligious.wav",
+          "3D": true,
+          "Loop": false,
+          "Paused": true,
+          "PlayAll": false,
+          "Volume": 1.0
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 5.0,
+            "Y": 100.0,
+            "Z": 5.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+    "LFollower2": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 7.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 3.14,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy_Prayer.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        },
+        "Audio": {
+          "File": "./resource/Sound/Dialog/Follower_Real.wav",
+          "3D": true,
+          "Loop": false,
+          "Paused": true,
+          "PlayAll": false,
+          "Volume": 1.0
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 5.0,
+            "Y": 100.0,
+            "Z": 5.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+    "LFollower3": {
+      "Position": {
+        "X": 6.209,
+        "Y": 0.0,
+        "Z": 7.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 3.14,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy_Prayer.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        },
+        "Audio": {
+          "File": "./resource/Sound/Dialog/Follower_See.wav",
+          "3D": true,
+          "Loop": false,
+          "Paused": true,
+          "PlayAll": false,
+          "Volume": 1.0
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 5.0,
+            "Y": 100.0,
+            "Z": 5.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+
+    "RFollower1": {
+      "Position": {
+        "X": -6.218,
+        "Y": 0.0,
+        "Z": -7.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 3.14,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy_Prayer.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        },
+        "Audio": {
+          "File": "./resource/Sound/Dialog/Follower_Truth.wav",
+          "3D": true,
+          "Loop": false,
+          "Paused": true,
+          "PlayAll": false,
+          "Volume": 1.0
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 5.0,
+            "Y": 100.0,
+            "Z": 5.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+    "RFollower2": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": -7.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 3.14,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy_Prayer.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        },
+        "Audio": {
+          "File": "./resource/Sound/Dialog/Follower_VOID.wav",
+          "3D": true,
+          "Loop": false,
+          "Paused": true,
+          "PlayAll": false,
+          "Volume": 1.0
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 5.0,
+            "Y": 100.0,
+            "Z": 5.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+    "RFollower3": {
+      "Position": {
+        "X": 6.209,
+        "Y": 0.0,
+        "Z": -7.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 3.14,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy_Prayer.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        },
+        "Audio": {
+          "File": "./resource/Sound/Dialog/Follower_WorshipOneselft.wav",
+          "3D": true,
+          "Loop": false,
+          "Paused": true,
+          "PlayAll": false,
+          "Volume": 1.0
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 5.0,
+            "Y": 100.0,
+            "Z": 5.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+    "Exit": {
+      "Position": {
+        "X": 26.646,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 3.14,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Door.obj",
+          "Texture": "./resource/Materials/DoorTex.png"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "LoadLevelOnInteract": {
+          "File": "./resource/Data/Hub.json",
+          "ToolTip": "E: Exit"
+        }
+      }
+    },
+
+    "Candle": {
+      "Position": {
+        "X": -11.702,
+        "Y": 0.0,
+        "Z": 12.728
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Candle_Tall.obj",
+          "Texture": "./resource/Materials/CandleTex.png"
+        }
+      }
+    },
+    "Candle2": {
+      "Position": {
+        "X": -11.702,
+        "Y": 0.0,
+        "Z": -12.728
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Candle_Tall.obj",
+          "Texture": "./resource/Materials/CandleTex.png"
+        }
+      }
+    },
+    "VoidStar": {
+      "Position": {
+        "X": -20.672,
+        "Y": 1.184,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 0.029,
+        "Y": 0.029,
+        "Z": 0.029
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/VoidStar.obj",
+          "Texture": "./resource/Materials/LightGray.png"
+        }
+      }
+    },
+    "Music": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "Audio": {
+          "File": [ "./resource/Sound/Music3.wav", "./resource/Sound/Static.wav" ],
+          "3D": false,
+          "Loop": true,
+          "Paused": false,
+          "PlayAll": true,
+          "Volume": 0.05
+        }
+      }
+    }
+  },
+
+  "Lights": {
+    "Light1": {
+      "Position": {
+        "X": 0.0,
+        "Y": 10.0,
+        "Z": 0.0
+      },
+      "Shadow": false
+    },
+    "Light2": {
+      "Position": {
+        "X": -70,
+        "Y": 30,
+        "Z": 0.0
+      },
+      "Shadow": true
+    },
+    "Light3": {
+      "Position": {
+        "X": -42.665,
+        "Y": 23.249,
+        "Z": 0.0
+      },
+      "Shadow": false
+    }
+  },
+  "FootStepSFX": "./resource/Sound/FootStep3.wav",
+  "Skybox": "./resource/skybox/Ascension/"
+}

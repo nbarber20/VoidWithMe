@@ -97,20 +97,8 @@ void TextRenderer::Load(std::string font, GLuint fontSize)
 
 void TextRenderer::RenderText(std::string text, GLfloat x, GLfloat y, GLfloat scale, glm::vec3 color)
 {
-	// Activate corresponding render state	
-	//TextShader->Bind();
-	//glDisable(GL_TEXTURE_2D);
-
-
-
 	glUseProgram(TextShader->GetProgram());
 
-
-	//glDisable(GL_CULL_FACE);
-	//glDisable(GL_DEPTH_TEST);
-
-	glEnable(GL_BLEND);
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);  
 	glm::mat4 projection = glm::ortho(0.0f, (float)Width, (float)Height,0.0f );
 	glUniformMatrix4fv(glGetUniformLocation(TextShader->GetProgram(), "projection"), 1, GL_FALSE, glm::value_ptr(projection));
 	glUniform1i(glGetUniformLocation(TextShader->GetProgram(), "text"), 0);

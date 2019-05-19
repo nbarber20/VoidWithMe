@@ -8,8 +8,6 @@ PointLight::PointLight(glm::vec3 Position, Shader* shader, bool doshadows)
 	this->Position = Position;
 	Shadows = doshadows;
 
-	if (Shadows) {
-
 		depthShader = shader;
 		const unsigned int SHADOW_WIDTH = 1024, SHADOW_HEIGHT = 1024;
 		glGenFramebuffers(1, &FrameBufferFBO);
@@ -29,25 +27,25 @@ PointLight::PointLight(glm::vec3 Position, Shader* shader, bool doshadows)
 		glDrawBuffer(GL_NONE);
 		glReadBuffer(GL_NONE);
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
-	}
+	
 }
 
 
 PointLight::~PointLight()
 {
 
+	depthShader->~Shader();
 	glDeleteFramebuffers(1, &FrameBufferFBO);
 	glDeleteTextures(1, &FrameBufferTexture);
 }
 
 void PointLight::LightPass(std::vector<Entity*> sceneEntities)
 {
-	if (Shadows) {
 		glClearColor(0.1f, 0.1f, 0.1f, 1.0f);
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		float near_plane = 1.0f;
-		float far_plane = 100.0f;
+		float far_plane = 1000.0f;
 		glm::mat4 shadowProj = glm::perspective(glm::radians(90.0f), (float)1024 / (float)1024, near_plane, far_plane);
 
 		// 0. create depth cubemap transformation matrices
@@ -61,9 +59,10 @@ void PointLight::LightPass(std::vector<Entity*> sceneEntities)
 		shadowTransforms2.push_back(shadowProj * glm::lookAt(Position, Position + glm::vec3(0.0f, 0.0f, -1.0f), glm::vec3(0.0f, -1.0f, 0.0f)));
 
 
-		//render light 2
+		//render light
 
 		glViewport(0, 0, 1024, 1024);
+		glDisable(GL_CULL_FACE);
 		glBindFramebuffer(GL_FRAMEBUFFER, FrameBufferFBO);
 		glClear(GL_DEPTH_BUFFER_BIT);
 		depthShader->use();
@@ -79,7 +78,8 @@ void PointLight::LightPass(std::vector<Entity*> sceneEntities)
 		}
 		//renderScene(simpleDepthShader);
 		glBindFramebuffer(GL_FRAMEBUFFER, 0);
-	}
 	
+
+		glEnable(GL_CULL_FACE);
 
 }

@@ -1,0 +1,760 @@
+{
+  "Objects": {
+    "Museam": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Museam.obj",
+          "Texture": "./resource/Materials/ColumnTex.jpg"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 88.805,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 17.267,
+            "Y": 100.0,
+            "Z": 44.573
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 68.770,
+            "Y": 0.0,
+            "Z": 20.035
+          },
+          "Size": {
+            "X": 24.018,
+            "Y": 100.0,
+            "Z": 4.078
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 100.368,
+            "Y": 0.0,
+            "Z": 39.272
+          },
+          "Size": {
+            "X": 6.624,
+            "Y": 100.0,
+            "Z": 34.383
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 77.811,
+            "Y": 0.0,
+            "Z": 60.454
+          },
+          "Size": {
+            "X": 47.268,
+            "Y": 100.0,
+            "Z": 7.832
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 49.857,
+            "Y": 0.0,
+            "Z": 45.395
+          },
+          "Size": {
+            "X": 13.130,
+            "Y": 100.0,
+            "Z": 24.784
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 38.102,
+            "Y": 0.0,
+            "Z": 26.349
+          },
+          "Size": {
+            "X": 13.130,
+            "Y": 100.0,
+            "Z": 16.798
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 22.546,
+            "Y": 0.0,
+            "Z": 14.522
+          },
+          "Size": {
+            "X": 20.691,
+            "Y": 100.0,
+            "Z": 16.798
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.238,
+            "Y": 0.0,
+            "Z": 16.908
+          },
+          "Size": {
+            "X": 25.059,
+            "Y": 100.0,
+            "Z": 9.426
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": -16.572,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 8.910,
+            "Y": 100.0,
+            "Z": 25.566
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": -4.195,
+            "Y": 0.0,
+            "Z": -36.899
+          },
+          "Size": {
+            "X": 17.217,
+            "Y": 100.0,
+            "Z": 49.757
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.115,
+            "Y": 0.0,
+            "Z": -15.095
+          },
+          "Size": {
+            "X": 27.765,
+            "Y": 100.0,
+            "Z": 5.929
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 22.376,
+            "Y": 0.0,
+            "Z": -12.586
+          },
+          "Size": {
+            "X": 20.909,
+            "Y": 100.0,
+            "Z": 12.386
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 22.066,
+            "Y": 0.0,
+            "Z": -19.818
+          },
+          "Size": {
+            "X": 45.419,
+            "Y": 100.0,
+            "Z": 4.287
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 1.814,
+            "Y": 0.0,
+            "Z": -39.140
+          },
+          "Size": {
+            "X": 5.551,
+            "Y": 100.0,
+            "Z": 36.784
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 24.978,
+            "Y": 0.0,
+            "Z": -61.704
+          },
+          "Size": {
+            "X": 43.340,
+            "Y": 100.0,
+            "Z": 10.422
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 52.597,
+            "Y": 0.0,
+            "Z": -46.695
+          },
+          "Size": {
+            "X": 14.206,
+            "Y": 100.0,
+            "Z": 26.208
+          },
+          "Trigger": false
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 69.067,
+            "Y": 0.0,
+            "Z": -37.445
+          },
+          "Size": {
+            "X": 24.798,
+            "Y": 100.0,
+            "Z": 38.843
+          },
+          "Trigger": false
+        }
+      }
+    },
+    "Bench": {
+      "Position": {
+        "X": 52.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Bench.obj",
+          "Texture": "./resource/Materials/BenchTex.jpg"
+        }
+
+      }
+    },
+    "Plant1": {
+      "Position": {
+        "X": 35.0,
+        "Y": 0.0,
+        "Z": 15.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Plant.obj",
+          "Texture": "./resource/Materials/PlantTex.jpg"
+        }
+
+      }
+    },
+    "Plant2": {
+      "Position": {
+        "X": 54.693,
+        "Y": 0.0,
+        "Z": -30.961
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Plant.obj",
+          "Texture": "./resource/Materials/PlantTex.jpg"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "LoadLevelOnInteract": {
+          "File": "./resource/Data/Plant.json",
+          "ToolTip": "E: Plant"
+        }
+      }
+    },
+    "Plant3": {
+      "Position": {
+        "X": 58,
+        "Y": 0.0,
+        "Z": 37
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Plant.obj",
+          "Texture": "./resource/Materials/PlantTex.jpg"
+        }
+
+      }
+    },
+    "BigPainting": {
+      "Position": {
+        "X": 80.0,
+        "Y": 12.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/BigPainting.obj",
+          "Texture": "./resource/Materials/ColumnTex.jpg"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "LoadLevelOnInteract": {
+          "File": "./resource/Data/Enlighten.json",
+          "ToolTip": "E:Enter Void"
+        }
+      }
+    },
+    "LongPainting_EastHall": {
+      "Position": {
+        "X": 76.671,
+        "Y": 8,
+        "Z": 56.195
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 1.57,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 2.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Painting.obj",
+          "Texture": "./resource/Materials/Paintings/EnlightenPainting.png"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "LoadLevelOnInteract": {
+          "File": "./resource/Data/Enlighten.json",
+          "ToolTip": "E: Awaken"
+        }
+      }
+    },
+    "Painting_EastHall_1": {
+      "Position": {
+        "X": 96.812,
+        "Y": 8,
+        "Z": 39.380
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Painting.obj",
+          "Texture": "./resource/Materials/Paintings/KeepPainting.jpg"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "LoadLevelOnInteract": {
+          "File": "./resource/Data/Keep.json",
+          "ToolTip": "E: Keep"
+        }
+      }
+    },
+    "Painting_WestHall_1": {
+      "Position": {
+        "X": 4.803,
+        "Y": 8,
+        "Z": -31.225
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Painting.obj",
+          "Texture": "./resource/Materials/Paintings/PrayPainting.png"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "LoadLevelOnInteract": {
+          "File": "./resource/Data/Altar.json",
+          "ToolTip": "E: Pray"
+        }
+      }
+    },
+    "Painting_WestHall_2": {
+      "Position": {
+        "X": 4.803,
+        "Y": 8,
+        "Z": -45.282
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Painting.obj",
+          "Texture": "./resource/Materials/Paintings/EscapePainting.jpg"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "LoadLevelOnInteract": {
+          "File": "./resource/Data/Escape.json",
+          "ToolTip": "E: Escape"
+        }
+      }
+    },
+    "Painting_WestHall_3": {
+      "Position": {
+        "X": 23.694,
+        "Y": 8,
+        "Z": -56
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 1.57,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Painting.obj",
+          "Texture": "./resource/Materials/Paintings/AscensionPainting.jpg"
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "LoadLevelOnInteract": {
+          "File": "./resource/Data/Ascend.json",
+          "ToolTip": "E: Ascend"
+        }
+      }
+    },
+    "ArtGUY": {
+      "Position": {
+        "X": 42.242,
+        "Y": 0.0,
+        "Z": 8.638
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        },
+        "Audio": {
+          "File": [ "./resource/Sound/Dialog/IEnjoyArt.wav", "./resource/Sound/Dialog/DoYouLoveMe.wav" ],
+          "3D": true,
+          "Loop": false,
+          "Paused": true,
+          "PlayAll": false,
+          "Volume": 1.0
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+    "ArtGUY2": {
+      "Position": {
+        "X": 36.653,
+        "Y": 0.0,
+        "Z": -38.052
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 1.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "MeshRenderer": {
+          "Model": "./resource/Models/Guy.obj",
+          "Texture": "./resource/Materials/GuyTex.jpg"
+        },
+        "Audio": {
+          "File": [ "./resource/Sound/Dialog/AppreciateTheArt.wav" ],
+          "3D": true,
+          "Loop": false,
+          "Paused": true,
+          "PlayAll": false,
+          "Volume": 1.0
+
+        },
+        "BoxCollider": {
+          "Offset": {
+            "X": 0.0,
+            "Y": 0.0,
+            "Z": 0.0
+          },
+          "Size": {
+            "X": 10.0,
+            "Y": 100.0,
+            "Z": 10.0
+          },
+          "Trigger": true
+        },
+        "PlaySoundOnInteract": {
+
+        }
+      }
+    },
+    "Music": {
+      "Position": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Rotation": {
+        "X": 0.0,
+        "Y": 0.0,
+        "Z": 0.0
+      },
+      "Scale": {
+        "X": 1.0,
+        "Y": 1.0,
+        "Z": 1.0
+      },
+      "Components": {
+        "Audio": {
+          "File": [ "./resource/Sound/Music1.wav", "./resource/Sound/Static.wav" ],
+          "3D": false,
+          "Loop": true,
+          "Paused": false,
+          "PlayAll": true,
+          "Volume": 0.05
+        }
+      }
+    }
+  },
+  "Lights": {
+    "Light1": {
+      "Position": {
+        "X": -10.0,
+        "Y": 10.0,
+        "Z": 0.0
+      },
+      "Shadow": true
+    },
+    "Light2": {
+      "Position": {
+        "X": 52.0,
+        "Y": 15.0,
+        "Z": 0.0
+      },
+      "Shadow": true
+    },
+    "Light3": {
+      "Position": {
+        "X": 26.0,
+        "Y": 10.0,
+        "Z": -35.0
+      },
+      "Shadow": false
+    },
+    "Light4": {
+      "Position": {
+        "X": 71.0,
+        "Y": 15.0,
+        "Z": 35.0
+      },
+      "Shadow": false
+    }
+  },
+  "FootStepSFX": "./resource/Sound/FootStep.wav",
+
+  "Skybox": "./resource/skybox/Ascension/"
+}
